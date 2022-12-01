@@ -1,0 +1,40 @@
+.sales_add_main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 170px;
+    & img {
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+        max-width: 100%;
+        object-fit: cover;
+    }
+}
+.add_title {
+    position: absolute;
+    top: 0;
+    font-weight: 700;
+    font-size: 35px;
+    letter-spacing: 0.25em;
+    color: #FFFFFF;
+    margin-top: 10px;
+}
+.add_buttons {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    bottom: 0;
+    margin-bottom: 30px;
+    & button {
+        width: 220px;
+        padding: 12px 0;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-weight: 600;
+        font-size: 17px;
+        color: #00000099;
+        border: 1px solid #fff;
+        text-transform: capitalize;
+    }
+}

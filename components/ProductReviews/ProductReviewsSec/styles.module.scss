@@ -1,0 +1,147 @@
+
+.review_accordion div:nth-last-child(1){
+    margin: 0;
+}
+.review_accordion {
+    margin-top: 20px;
+}
+@keyframes anim {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }}
+.review_parts {
+    margin-top: 60px;
+    animation: anim 500ms ease-in-out forwards;
+    &:nth-last-of-type(1) {
+        hr {opacity: 0;}
+    }
+}
+.review_line {
+    opacity: 0.5;
+    width: 95%;
+    margin-top: 60px;
+
+}
+.review_customer_pic {
+    height: 43px;
+    width: 43px;
+    border-radius: 50%;
+    overflow: hidden;
+    & img {
+        height: 100%;
+        width: 100%;
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: cover;
+    }
+}
+.review_name {
+    font-family: 'Avenir Next Cyr';
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.01em;
+    margin-left: 18px;
+}
+.review_time {
+    font-family: 'Avenir Next Cyr';
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0.02em;
+    color: #7e7e7e60;
+    margin-right: 17px;
+}
+.review_rate {
+    & span:first-child {
+        margin-right: 8px;
+    }
+}
+.review_new {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.02em;
+    margin-bottom: 10px;
+    & span:first-child {
+        height: 11px;
+        width: 11px;
+    }
+    & span:nth-child(2) {
+        margin-left: 8px;
+    }
+}
+.review_text {
+    margin-left: 61px;
+    line-height: 22px;
+}
+.review_pic_part {
+    display: flex;
+    width: 50%;
+    margin-left: 61px;
+    margin-top: 18px;
+    & .review_pic {
+        height: 64px;
+        width: 64px;
+        margin-right: 17px;
+        & img {
+            height: 100%;
+            width: 100%;
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+    }
+}
+.review_quantity {
+font-family: 'Avenir Next Cyr';
+font-weight: 300;
+font-size: 10px;
+letter-spacing: 0.04em;
+justify-content: center;
+align-items: center;
+text-align: center;
+white-space: nowrap;
+}
+.review_new_rate {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+}
+.review_stars {
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    margin-right: 27px;
+}
+.review_form {
+    width: 70%;
+    & input {
+        margin-bottom: 24px;
+    }
+} 
+.review_form_buttons {
+    margin-top: 45px;
+    & button {
+        &:first-child {
+        margin-right: 25px;
+        color:#000000;
+        &:hover {
+            border: 1px solid #737B77;
+            background: none;
+            color:#737B77;
+        }
+            }
+        &:nth-child(2) {
+            background: #737B77;
+            color:#fff;
+            &:hover {
+                border: 1px solid #737B77;
+                background: none;
+                color:#737B77;
+            }
+            }
+}
+}

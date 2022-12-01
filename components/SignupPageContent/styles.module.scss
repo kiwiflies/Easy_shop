@@ -1,0 +1,117 @@
+.login_part {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        input {
+            margin-bottom: 11px;
+            margin-top: 11px;
+            padding: 15px 0 15px 20px;
+            border: 1px solid #36363650;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 16px;
+            letter-spacing: 0.04em;
+            color: #757575;
+            outline: none;
+        }
+        .error_message {
+            margin-bottom: 10px;
+            color:#CB2934;
+            font-size: 12px;
+            font-weight: 500;
+            display: flex;
+            justify-content: center;
+        }
+        input[type="date"] {
+            box-sizing: border-box;
+            padding: .85rem;
+            position: relative;
+                &::-webkit-input-placeholder {
+                    color: transparent;
+                }            
+                &::-webkit-calendar-picker-indicator {
+                background: transparent;
+                bottom: 0;
+                color: transparent;
+                cursor: pointer;
+                height: auto;
+                left: 0;
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: auto;
+            }
+        }
+    }
+    button {
+        width: 50%;
+        padding: 15px 0;
+        margin-top: 40px;
+    }
+}
+
+.subscribe {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    & input {
+        margin-bottom: 0!important;
+        margin-top: 0!important;
+        accent-color: #002140E3;
+    }
+    & label {
+        color: #002140E3;
+        font-family: 'Avenir Next Cyr';
+        font-weight: 500;
+        font-size: 12px;
+        letter-spacing: 0.01em;
+        margin-left: 12px;
+    }
+}
+.pass_input {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    & input {
+        width: 100%
+    }
+}
+.show_pass {
+    position: absolute;
+    top: 0;
+    right:0;
+    margin-right: 20px;
+    padding-top: 27px;
+    cursor: pointer;
+    font-family: 'Avenir Next Cyr';
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    color: #000000CC;
+    border-bottom: 1px solid #000000CC;
+}
+.input_label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    & input {
+        width: 100%;
+        &:nth-child(5) {
+            width: 100%;
+        }
+    }
+    & label {
+        width: 30%;
+        font-weight: 500;
+    }
+
+}

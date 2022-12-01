@@ -1,0 +1,19 @@
+.button_grey {
+    position: absolute;
+    top: 0;
+    margin-top: 4%;
+    margin-right: 2%;
+    right: 0;
+    z-index: 99;
+    border: 2px solid #80808030;
+    background-color: #ffffff50;
+    padding: 5px;
+    font-size: 10px;
+    color: #80808030;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button_grey:hover {
+    background-color: #80808030;
+    color: #fff;
+}

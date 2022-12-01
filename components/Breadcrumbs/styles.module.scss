@@ -1,0 +1,19 @@
+.breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+.breadcrumb_single {
+    text-decoration: none;
+    border: 1px solid #22222238;
+    font-weight: 500;
+    font-size: 11px;
+    color: #00000091;
+    text-transform: capitalize;
+    padding: 5px 15px;
+    margin-right: 7px;
+    &:nth-last-of-type(1) {
+        pointer-events: none;
+    }
+}

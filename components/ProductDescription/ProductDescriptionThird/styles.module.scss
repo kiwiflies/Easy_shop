@@ -1,0 +1,231 @@
+.productpage_rate {
+    display: flex;
+    margin-bottom: 4px;
+    & svg {
+        path {
+            fill: #727B77;
+            // stroke: #727B77;
+        }
+    }
+}
+.productpage_color_circle {
+    height: 18px;
+    width: 18px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.productpage_code {
+    margin-bottom: 8px;
+    color: #666666;
+}
+.productpage_title {
+    font-family: 'Avenir Next Cyr';
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.18em;
+    color: #000;
+    margin-bottom: 4px;
+}
+.productpage_buyed {
+    color: #06113C80;
+    font-size: 13px;
+    margin-left: 7px;
+}
+.product_sale_price {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-family: 'Avenir Next Cyr';
+    & span:first-child{
+        font-weight: 500;
+        font-size: 14px;
+        color: #000;
+        text-decoration: line-through;
+    }
+    & span:nth-child(2) {
+        font-weight: 500;
+        font-size: 14px;
+        color: #E02020;
+    }
+}
+.productpage_sale {
+    font-size: 10px;
+    color: #666666;
+}
+.productpage_grey_text {
+    letter-spacing: -0.02em;
+    color: #868686!important;
+    font-size: 12px;
+}
+.productpage_color_part{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+.productpage_color_name {
+    font-family: 'Avenir Next Cyr';
+    font-weight: 500;
+    font-size: 10px;
+    & span {
+        color: #121314;
+        margin-left: 3px;
+    }
+}
+.productpage_colors {
+    display: flex;
+}
+.productpage_quantity {
+    margin-top: 25px;
+}
+.quantity {
+    width: 77px;
+}
+.productpage_add_like {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    & button:first-child {
+        padding: 11px;
+        border: 1px solid #00000080;
+        text-transform: none;
+        background: #00000080;
+        font-weight: 500;
+        color: #fff;
+        &:hover {
+            background: #fff;
+            color: gray;
+        }
+    }
+    & button:nth-child(2) {
+        border: none;
+        background: transparent;
+        margin-top: 25px;
+        width: fit-content;
+        cursor: pointer;
+        font-family: 'Avenir Next Cyr';
+        font-weight: 700;
+        font-size: 13px;
+        letter-spacing: 0.07em;
+        color: #12131480;
+        position: relative;
+        &:after{
+            content: "";
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin-top: 18px;
+            border-width: 0 0 1px;
+            border-style: solid;
+            border-color: #12131480;
+        }
+        &:hover:after{
+            display: none;
+        }
+    }
+}
+.productpage_description {
+    margin-top: 30px;
+    border-top: 1px solid #00000020;
+}
+
+.drop_header {
+    padding: 10px 15px;
+    border: 1px solid #000000;
+    font-family: 'Avenir Next Cyr';
+    font-weight: 500;
+    font-size: 12px;
+    display: flex;
+    color: #121314;
+    justify-content: space-between;
+    background: #ffffff;
+    align-items: center;
+    cursor: pointer;
+}
+.arrow {
+    margin-left: 15px;
+    transition: all 0.1s ease-in-out;
+    transform: '';
+}
+.drop_div {
+    display: flex;
+    position: relative;
+}
+.drop_list {
+    width: 100%;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    background: #ffffff;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.18);
+    box-sizing: border-box;
+    color: #161616;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
+.drop_list_item {
+    display: flex;
+    list-style: none;
+    padding: 10px;
+    border-bottom: 1px solid #00000020;
+    cursor: pointer;
+    & span:first-child {
+        margin-right: 13px;
+    }
+    &:last-child{
+        border-bottom: none;
+    }
+}
+.size_part {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+.productpage_share {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    & svg path:first-child {
+        fill:#00000080;
+    }
+    & a {
+        margin-right: 20px;
+    }
+}
+.drop div {
+    color:#000;
+    & i {
+        background: #000;
+        &:after {
+            background: #000;
+        }
+    }
+}
+.productpage_reviews {
+    margin-top: 25px;
+    width: fit-content;
+        cursor: pointer;
+        font-family: 'Avenir Next Cyr';
+        font-weight: 700;
+        font-size: 13px;
+        letter-spacing: 0.07em;
+        color: #12131480;
+        position: relative;
+        &:after{
+            content: "";
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin-top: 18px;
+            border-width: 0 0 1px;
+            border-style: solid;
+            border-color: #12131480;
+        }
+        &:hover:after{
+            display: none;
+        }
+    }

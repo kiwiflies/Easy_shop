@@ -1,0 +1,21 @@
+// .slider_sec img {
+//     height: 100%;
+//     width: 100%;
+//     max-width: 100%;
+//     max-height: 100%;
+//     object-fit: contain;
+// }
+// .slider_sec .swiper-button-next {
+//     display: none;
+// }
+.slider_button_part {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10%;
+    margin-left: 5%;
+    & button {
+        border: none;
+        text-transform: none;
+        font-weight: 700;
+    }
+}

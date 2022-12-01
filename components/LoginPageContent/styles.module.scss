@@ -1,0 +1,69 @@
+.login_part {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        input {
+            margin-bottom: 12px;
+        }
+        .error_message {
+            margin-bottom: 15px;
+            color:#CB2934;
+            font-size: 12px;
+            font-weight: 500;
+        }
+    }
+    button {
+        padding: 15px 180px;
+        margin-top: 40px;
+    }
+}
+.forgot {
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.03em;
+    font-family: 'Avenir Next Cyr';
+    color: #002140A1;
+    border-bottom: 1px solid #002140A1;
+    width: fit-content;
+    margin-bottom: 40px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.loggedin {
+    display: flex;
+    margin-left: 10px;
+    & input {
+        margin-bottom: 0!important;
+        accent-color: #002140E3;
+    }
+    & label {
+        color: #002140E3;
+        font-family: 'Avenir Next Cyr';
+        font-weight: 500;
+        font-size: 12px;
+        letter-spacing: 0.01em;
+        margin-left: 12px;
+    }
+}
+.signup {
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: 17px;
+ & span:first-child {
+    color: #000000;
+ }
+ & span:nth-child(2) {
+    margin-left: 7px;
+    color: #002140A1;
+    border-bottom: 1px solid #002140A1;
+ }
+}

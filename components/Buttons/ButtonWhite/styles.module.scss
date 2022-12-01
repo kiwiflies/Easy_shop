@@ -1,0 +1,16 @@
+.button_white {
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #161616;
+    text-transform: uppercase;
+    font-family: 'Avenir Next Cyr';
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px 28px;
+    color: #161616;
+        &:hover {
+            border: 1px solid #161616;
+            background-color: #161616;
+            color: #fff;
+        }
+}

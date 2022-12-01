@@ -1,0 +1,55 @@
+.zoom_main {
+    height: 100vh;
+    width: 100vw;
+    background: #00000060;
+    position: fixed;
+    top:0;
+    z-index: 900;
+}
+.button_prev,
+.button_next {
+    background: transparent;
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    cursor: pointer;
+    & svg path {
+        stroke-width: 3;
+        stroke: #fff;
+    }
+}
+.button_next {
+    right: 0;
+}
+.zoom_container {
+    position: absolute;
+    width: 50%;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+}
+.zoom_close {
+    position: absolute;
+    z-index: 501;
+    right: 0;
+    padding: 25px;
+    cursor: pointer;
+    & svg path {
+            stroke-width: 2;
+            stroke: #fff;
+        }
+}
+.slider_zoom img {
+    height: 700px;
+    width: 100%;
+    max-width: 100%;
+    max-height: 95%;
+    object-fit: cover;
+    object-position: top center;
+}
+.zoom_slider_part {
+    width: 70%;
+    margin: 0 auto;
+}

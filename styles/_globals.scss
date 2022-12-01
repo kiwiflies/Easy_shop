@@ -1,0 +1,360 @@
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--primary-font);
+  font-size: 14px;
+}
+main {
+  min-height: 100vh;
+}
+.img-cover {
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover; 
+}
+.container {
+  max-width: 100%;
+  width: 1400px;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  &.fullWidth {
+    width: 100%;
+  }
+}
+.flex {
+  display: flex;
+}
+.i-flex {
+  display: inline-flex;
+}
+.column {
+  flex-direction: column;
+}
+.between {
+  justify-content: space-between;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.align-end {
+  align-items: flex-end;
+}
+.block {
+  display: block;
+}
+.j-center {
+  justify-content: center;
+}
+.a-center {
+  align-items: center;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+.grow {
+  flex-grow: 1;
+}
+.shrink {
+  flex-shrink: 0;
+}
+.row {
+  margin-left: -5px;
+  margin-right: -5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.call {
+  padding-left: 5px;
+  padding-right: 5px;
+
+  &.call-4 {
+    width: 25%;
+  }
+  &.call-3 {
+    width: 33%;
+  }
+}
+
+@include xxl {
+  .container {
+    width: 1240px;
+  }
+}
+@include xl {
+  .container {
+    width: 1030px;
+  }
+}
+@include lg {
+
+}
+@include md {
+
+}
+@include sm {
+
+}
+
+/* SLIDERS */
+.swiper-slide {
+  cursor: pointer;
+}
+
+.slider_main {
+  margin-top: 30px;
+    & .swiper-button-prev {
+    background-color:#ffffff80;
+    height: 45px;
+    width: 45px;
+    color: #000;
+      &::after {
+        font-size: 25px;
+        line-height: 42px;
+      }
+  }
+    & .swiper-button-next {
+      background-color:#ffffff80;
+      height: 45px;
+      width: 45px;
+      color: #000;
+        &::after {
+          font-size: 25px;
+          line-height: 42px;
+        }
+    }
+}
+.slider_sec {
+  margin-top: 30px;
+  position: relative;
+  & .swiper-pagination-bullets{
+    bottom: 25px!important;
+  }
+  & .swiper-pagination-bullet {
+    width: 19px;
+    height: 19px;
+    border: 1px solid #fff;
+    opacity: 1;
+    background-color: transparent;
+  }
+  & .swiper-pagination-bullet-active {
+    background-color: #fff;
+  }
+}
+.slider_main img,
+.slider_sec img,
+.slider_third img {
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.slider_third{
+  margin-top: 30px;
+  & .swiper-slide {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+.see_all_slider {
+  & .swiper-pagination {
+    position: relative;
+    margin-top: 65px;
+  }
+  & .swiper-pagination-bullet {
+    width: 19px;
+    height: 19px;
+    border: 2px solid #A17761;
+    opacity: 1;
+    margin-right: 15px!important;
+    background-color: transparent;
+  }
+  & .swiper-pagination-bullet-active {
+    background-color: #A17761;
+  }
+}
+
+/* END OF SLIDERS */
+
+/* NEWSALE TABS */
+
+.tabs_part_main {
+  margin-top: 40px;
+  position: relative;
+    .react-tabs__tab-list {
+      border-top: 1px solid #00000050;
+      padding-bottom: 5px!important;
+      padding-top: 5px!important;
+    }
+    .react-tabs__tab--selected {
+      border: none!important;
+      font-weight: 600;
+    }
+    .react-tabs__tab {
+      border: none!important;
+      border-bottom: none;
+      bottom: 0px!important;
+    }
+}
+.tabs_part_sec {
+  margin-top: 40px;
+    .react-tabs__tab-list {
+      display: flex;
+      justify-content: center;
+      border-bottom: none!important;
+    }
+    .react-tabs__tab--selected {
+      border: none!important;
+      position: relative;
+      margin-bottom: 0px;
+      & div{
+        color: #520101!important;
+          &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            border-bottom: 1px solid;
+            padding-bottom: 16px;
+            width: 90%;
+            display: block;
+        }
+      }
+    }
+    .react-tabs__tab {
+      font-weight: 700;
+      border: none!important;
+      border-bottom: none;
+      bottom: 0px!important;
+      &:nth-child(2) {
+        margin-left: 97px;
+      }
+    }
+}
+.tabs_part_third {
+  margin-top: 40px;
+    .react-tabs__tab-list {
+      border-bottom: none!important;
+    }
+    .react-tabs__tab--selected {
+      border: none!important;
+      background: #C8AC95!important;
+    }
+    .react-tabs__tab {
+      font-weight: 500;
+      font-size: 18px;
+      border: none!important;
+      border-bottom: none;
+      bottom: 0px!important;
+      padding: 10px 35px;
+      background: #C8AC9540;
+      color: #fff;
+      border-radius: 0;
+      &:nth-child(2) {
+        margin-left: 20px;
+      }
+    }
+}
+/* END OF NEWSALE TABS */
+.mySwiper2,
+.mySwiper {
+  height: 665px;
+  & img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  // & .swiper-vertical {
+  //   touch-action: pan-x!important;
+  // }
+  // & .swiper-button-prev {
+  //   position: absolute;
+  //   top:0;
+  //   z-index: 2000;
+  // }
+  // & .swiper-button-next {
+  //   position: absolute;
+  //   bottom: 0;
+  //   z-index: 2000;
+  // }
+}
+.ql-toolbar.ql-snow {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  font-family: 'Avenir Next Cyr'!important;
+}
+.ql-container.ql-snow {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  height: 150px;
+}
+.ql-editor.ql-blank::before {
+  color: #8D9399;
+  font-family: 'Avenir Next Cyr'!important;
+  font-weight: 500;
+  font-style: normal!important;
+}
+/* PRODUCT SEC TABS */
+
+.productsec_tabs .react-tabs__tab-list {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  .react-tabs__tab {
+    display: flex;
+    justify-content: center;
+    width: 33%;
+    border-bottom: 2px solid #838383;
+    padding-bottom: 11px;
+    color: #393939;
+    font-family: 'Avenir Next Cyr';
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  .react-tabs__tab--selected {
+    border-bottom: 2px solid #000000;
+    color: #393939;
+    font-weight: 700;
+  }
+}
+
+
+/* END OF PRODUCT SEC TABS */
+
+/* ACCOUNT SETTINGS */
+
+.acc_settings_tabs {
+  .react-tabs {
+    // width: 100%!important;
+    display: flex!important;
+  }
+  .react-tabs__tab-list {
+    display: flex!important;
+    flex-direction: column!important;
+    border-bottom: none;
+    & li {
+      border-radius: 0;
+      border: none;
+    }
+    & .react-tabs__tab--selected {
+      & span{
+      font-weight: 600;
+    }
+  }
+  }
+
+}

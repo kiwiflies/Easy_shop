@@ -1,0 +1,52 @@
+.search_input {
+    width: 100%;
+    padding: 12px 42px;
+    background: rgba(248, 248, 248, 0.44);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 55px;
+
+    &::placeholder{
+        font-style: italic;
+        font-size: 15px;
+        letter-spacing: 0.03em;
+        color: rgba(0, 0, 0, 0.6);
+    }
+    &:focus-visible,
+    :active,
+    :visited,
+    :target,
+    :focus {
+        outline: 1px solid rgba(0, 0, 0, 0.7);
+    }
+}
+.search_icon {
+    position: absolute;
+    right: 0;
+    margin-right: 42px;
+    margin-top: 12px;
+}
+.search_input_small {
+    border: none;
+    border-bottom: 1px solid #000;
+    margin-bottom: 17px;
+    padding-left: 25px;
+    padding-bottom: 10px;
+    &::placeholder{
+        font-style: italic;
+        font-size: 15px;
+        letter-spacing: 0.03em;
+        color: rgba(0, 0, 0, 0.6);
+    }
+    &:focus-visible,
+    :active,
+    :visited,
+    :target,
+    :focus {
+        outline: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+    }
+}
+.search_icon_sec {
+    position: absolute;
+    left: 0;
+}

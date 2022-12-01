@@ -1,0 +1,52 @@
+.input_text {
+    position: absolute;
+    top:-9px;
+    left: 20px;
+    z-index: 2;
+    font-family: 'Avenir Next Cyr';
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: #373737;
+    background: #fff;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: none;
+}
+
+.main_input {
+    padding: 16px 0 16px 20px;
+    border: 1px solid #36363650;
+    border-radius: 6px;
+    position: relative;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    color: #757575;
+    outline: none;
+    width: 100%;
+    &::placeholder {
+        font-family: 'Avenir Next Cyr';
+    }
+    &:focus {
+        ~.input_text {
+            display: block;
+        }
+        &::placeholder {
+            color: transparent;
+        }
+    }
+}
+.show_pass {
+    position: absolute;
+    right:0;
+    margin-right: 20px;
+    padding-top: 16px;
+    cursor: pointer;
+    font-family: 'Avenir Next Cyr';
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    color: #000000CC;
+    border-bottom: 1px solid #000000CC;
+}

@@ -1,0 +1,95 @@
+@keyframes anim {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }}
+  .accordion_header{
+    font-family: 'Avenir Next Cyr';
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+    background: #36433DB2;
+    padding: 13px 87px;
+    border-radius: 2px;
+    animation: anim 500ms ease-in-out forwards;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  
+  .accordion_item {
+      position: relative;
+      padding-bottom: 4px;
+      border-bottom: 1px solid #00000020;
+      overflow: hidden;
+      cursor: pointer;
+  }
+  
+  .accordion_item .accordion_content {
+  margin-top: 0;
+  max-height: 0;
+  opacity: 0;
+  margin-bottom: 0;
+  transform: translateY(100%);
+  }
+  
+  .accordion_item.accordion_expanded .accordion_header {
+    display: none;
+  }
+  .accordion_item.accordion_expanded .accordion_content {
+    margin-top: 0;
+    max-height: 3000px;
+    opacity: 1;
+    padding-top: 30px;
+    transform: translateY(0);
+    }
+    
+  
+  .accordion_content {
+    line-height: 19px;
+    letter-spacing: -0.02em;
+    max-height: 800px;
+    opacity: 1;
+    transform: translate(0,0);
+    overflow: hidden;
+    width: 100%;     
+  }
+  .transition, .accordion_content {
+  transition: all 1s ease-in-out;
+  
+  }
+  .accordion_item {
+  animation: flipdown 0.5s ease both;
+  }
+  .accordion_item {
+  animation-delay: 0.5s;
+  }
+  
+  @keyframes flipdown {
+  0% {
+    opacity: 0;
+    transform-origin: top center;
+    transform: rotateX(-90deg);
+  }
+  5% {
+    opacity: 1;
+  }
+  80% {
+    transform: rotateX(8deg);
+  }
+  83% {
+    transform: rotateX(6deg);
+  }
+  92% {
+    transform: rotateX(-3deg);
+  }
+  100% {
+    transform-origin: top center;
+    transform: rotateX(0deg);
+  }
+  }
+  .accordion_block {
+    display: inline;
+  }

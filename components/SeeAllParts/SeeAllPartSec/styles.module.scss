@@ -1,0 +1,55 @@
+.see_all_part {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.see_all_top {
+    display: inline-block;
+    flex-direction: column;
+    margin-bottom: 27px;
+}
+.see_all_title {
+    font-family: 'Avenir Next Cyr';
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: 0.57em;
+    display: flex;
+    justify-content: center;
+}
+.view_all {
+    display: inline-block;
+    margin-right: 50px;
+    font-size: 12px;
+    line-height: 16px;
+    border-bottom: 1px solid #161616;
+    padding: 0 5px;
+    & a {
+        margin-bottom: 0;
+    }
+    &::after {
+        content: "";
+        border-bottom: 1px solid transparent;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    &:hover {
+        border-bottom: none;
+        &::after {
+            border-bottom: 1px solid #161616;
+        }
+    } 
+}
+.button_prev,
+.button_next {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.button_prev {
+    margin-right: 20px;
+}

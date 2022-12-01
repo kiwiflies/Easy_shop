@@ -1,0 +1,12 @@
+.button_like {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: #000;
+        &:active {
+            color: #CB2934;
+            & svg {
+                fill: #CB2934;
+            }
+        }
+}

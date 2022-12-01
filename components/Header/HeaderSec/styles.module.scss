@@ -1,0 +1,30 @@
+.headersec {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+    padding: 30px 0;
+}
+.headersec_menu div a{
+    border: 1px solid transparent;
+    margin-right: 60px;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 7px 9px;
+    &:hover {
+        border: 1px solid #000;
+    }
+    & a:active,
+    a:focus {
+        border: 1px solid #000;
+    }
+}
+.headersec_menu,
+.headersec_logo,
+.headersec_icons {
+    display: flex;
+    flex: 1;
+}
+.headersec_logo {
+    justify-content: center;
+}
+.headersec_icons {
+    justify-content: end;
+}

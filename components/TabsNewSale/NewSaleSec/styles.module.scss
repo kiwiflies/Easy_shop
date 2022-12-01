@@ -1,0 +1,52 @@
+.new_tab,
+.sale_tab {
+    font-size: 19px;
+    color:#A7A7A7;
+    letter-spacing: 0.26em;
+    font-family: 'Avenir Next Cyr';
+    &::after {
+        content: "";
+        border-bottom: 1px solid;
+        padding-bottom: 16px;
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+}
+.tabs_part {
+    margin-top: 40px;
+    position: relative;
+}
+
+.slider_part {
+    margin-top: 45px;
+}
+.button_prev,
+.button_next {
+    position: absolute;
+    background: none;
+    border: none;
+    top:0;
+    z-index: 2;
+    top:50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.button_prev {
+    left: 0;
+}
+.button_next {
+    right: 0;
+}
+.shop_now_button {
+    margin-top: 55px;
+    display: flex;
+    justify-content: center;
+    & button {
+        border: 1px solid #77696970;
+        color: #776969;
+        text-transform: none;
+        padding: 15px 65px;
+    }
+}

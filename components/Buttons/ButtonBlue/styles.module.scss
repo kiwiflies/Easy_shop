@@ -1,0 +1,14 @@
+.button_blue {
+    cursor: pointer;
+    background-color: #06113C;
+    border: none;
+    font-family: 'Avenir Next Cyr';
+    font-size: 13px;
+    font-weight: 700;
+    padding: 13px 45px;
+    border-radius: 6px;
+    color: #fff;
+        &:hover {
+            background-color: #161616;
+        }
+}

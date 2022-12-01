@@ -1,0 +1,107 @@
+.productpage_part {
+    margin-top: 90px;
+    margin-bottom: 130px;
+}
+.productpage_item_title {
+    font-family: 'Avenir Next Cyr';
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.04em;
+    margin-bottom: 7px;
+}
+.productpage_item_code {
+    font-family: 'Avenir Next Cyr';
+    font-weight: 500;
+    font-size: 13px;
+    color: #666666;
+    margin-bottom: 7px;
+}
+.productpage_rate {
+    display: flex;
+    & svg {
+        margin-right: 5px;
+    }
+}
+.productpage_buyed {
+    font-weight: 400;
+    font-size: 14px;
+    color:#5E6864B2;
+}
+.product_sale_price {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-family: 'Avenir Next Cyr';
+    & span:first-child{
+        font-weight: 500;
+        font-size: 18px;
+        text-decoration: line-through;
+    }
+    & span:nth-child(2) {
+        font-weight: 600;
+        font-size: 18px;
+        color: #E02020;
+    }
+}
+.productpage_slider {
+    margin-top: 17px;
+}
+.productpage_reviews {
+    width: 80%;
+    margin: 0 auto;
+}
+.productpage_descrip {
+    font-family: 'Avenir Next Cyr';
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: 0.07em;
+    padding-top: 35px;
+    width: 95%;
+    margin: 0 auto;
+    animation: anim 500ms ease-in-out forwards;
+}
+@keyframes anim {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }}
+    .productpage_bottom_products {
+        display: flex;
+        // margin-bottom: 100px;
+        position: relative;
+    }
+    .productpage_bottom_text {
+        margin-top: 125px;
+        margin-bottom: 50px;
+        font-weight: 700;
+        font-size: 18px;
+        letter-spacing: 0.08em;
+        font-family: "Avenir Next Cyr";
+        color: #393939;
+        text-transform: uppercase;
+    }
+    
+    .button_prev,
+    .button_next {
+        position: absolute;
+        background: none;
+        border: none;
+        top:0;
+        z-index: 2;
+        top:50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+    .button_prev {
+        left: 0;
+        margin-left: -2%;
+    }
+    .button_next {
+        right: 0;
+        margin-right: -2%;
+    }
+    

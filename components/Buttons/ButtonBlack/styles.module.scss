@@ -1,0 +1,14 @@
+.button_black {
+    cursor: pointer;
+    background-color: #161616;
+    border: 1px solid #161616;
+    font-family: 'Avenir Next Cyr';
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px 73px;
+    color: #fff;
+        &:hover {
+            background-color: #fff;
+            color: #161616;
+        }
+}

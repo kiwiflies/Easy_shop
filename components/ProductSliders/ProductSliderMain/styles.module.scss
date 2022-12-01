@@ -1,0 +1,43 @@
+.button_prev,
+.button_next {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    // bottom: 0;
+    // top: 50%;
+    // transform: translateY(-50%);
+    z-index: 200;
+    cursor: pointer;
+}
+.button_prev {
+    // right: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+.button_next {
+    // right: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.mySwiper {
+    height: 665px;
+    position: relative;
+    & img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+}
+.left_slider {
+    display: flex;
+    width: 30%;
+    align-items: center;
+    position: relative;
+}
+.right_slider {
+    width: 70%;
+    height: 665px;
+    position: relative;
+}

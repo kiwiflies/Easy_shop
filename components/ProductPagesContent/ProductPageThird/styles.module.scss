@@ -1,0 +1,100 @@
+.productpage_part {
+    position: relative;
+    margin-bottom: 130px;
+    & img {
+        height: 100%;
+        width: 100%;
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: cover;
+    }
+}
+.productpage_top {
+    display: flex;
+}
+.productpage_pics {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    & div {
+        margin-right: 3px;
+        margin-bottom: 3px;
+        width: 49%;
+        &:nth-child(5) {
+            width: 99%;
+            margin-right: 0;
+              div:first-child {
+                display: flex;
+                align-items: flex-end;
+                flex-direction: column-reverse;
+                padding-top: 0;
+                padding-bottom: 5px;
+                width: 99%;
+                margin-right: 0;
+                div {
+                    display: flex;
+                    margin-right: 0;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    padding-top: 0;
+                    padding-bottom: 5px;
+                    & div{
+                        width: 33%;
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+        }
+}
+
+.productpage_description {
+    width: 40%;
+}
+.productpage_bottom_products {
+    display: flex;
+    position: relative;
+}
+.productpage_bottom_text {
+    margin-top: 125px;
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.button_prev,
+.button_next {
+    position: absolute;
+    background: none;
+    border: none;
+    top:0;
+    z-index: 2;
+    top:50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.button_prev {
+    left: 0;
+    margin-left: -2%;
+}
+.button_next {
+    right: 0;
+    margin-right: -2%;
+}
+.accordion {
+    color: #000;
+    & i {
+        background: #000;
+        &:after {
+            background: #000;
+        }
+    }
+}
+.productpage_description {
+    margin-left: 5%;
+}
+    

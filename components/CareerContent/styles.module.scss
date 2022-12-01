@@ -1,0 +1,26 @@
+
+.career_main {
+    width: 40%;
+    font-family: 'Avenir Next Cyr';
+    margin-top: 85px;
+    margin-bottom: 140px;
+}
+.career_accordion div:first-child{
+    text-transform: capitalize;
+}
+.career_small_headers {
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.04em;
+    color: #06113C;
+}
+.career_texts {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 0.04em;
+    color: #000000;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-transform: none;
+}

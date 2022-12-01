@@ -1,0 +1,14 @@
+.button_grey {
+    cursor: pointer;
+    background-color: #E7E7E7;
+    border: 1px solid #E7E7E7;
+    font-family: 'Avenir Next Cyr';
+    font-size: 13px;
+    font-weight: 700;
+    padding: 13px 45px;
+    border-radius: 6px;
+    color: #06113C;
+        &:hover {
+            border: 1px solid #06113C;
+        }
+}
