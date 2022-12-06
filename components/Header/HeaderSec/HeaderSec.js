@@ -5,13 +5,13 @@ import Logo from '../../Logo/Logo';
 
 
 
-function HeaderSec() {
+function HeaderSec({categories}) {
   return (
     <header className={classes.headersec}>
       <div className="container">
             <div className='flex between a-center'>
               <div className={classes.headersec_menu}>
-                <MenuLinks header/>
+                <MenuLinks header categories={categories}/>
               </div>
               <div className={classes.headersec_logo}>
                 <Logo black/>

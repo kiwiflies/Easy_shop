@@ -153,14 +153,14 @@ function ProductPageThird() {
     <div className={classes.productpage_part}>
         <div className={classes.productpage_top}>
           <div className={classes.productpage_pics}>
-            {data.image.slice(0, 4).map((item) => (
-              <div className={classes.productpage_pics_one}>
+            {data.image.slice(0, 4).map((item, index) => (
+              <div className={classes.productpage_pics_one} key={index}>
                 <img src={item}/>
               </div>
             ))}
             <CustomAccordion className={classes.accordion}>
-            {data.image.slice(4, data.image.lenght).map((item) => (
-              <div className={classes.productpage_pics_one}>
+            {data.image.slice(4, data.image.lenght).map((item, index) => (
+              <div className={classes.productpage_pics_one} key={index}>
                 <img src={item}/>
               </div>
             ))}
@@ -179,8 +179,8 @@ function ProductPageThird() {
         </div>
         <div className={classes.productpage_bottom_products}>
           <Swiper {...settings}>
-              {data1?.map((item) => (
-                  <SwiperSlide>
+              {data1?.map((item, index) => (
+                  <SwiperSlide key={index}>
                     <div style={{marginRight: "20px"}}>
                       <ProductCardThird product_name={item.product_name}
                                     productType={item.productType}

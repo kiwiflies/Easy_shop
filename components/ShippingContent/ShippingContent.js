@@ -11,7 +11,7 @@ function ShippingContent () {
     const { footerPagesData } = useSelector((state) => state.footer);
     useEffect(() => {
       dispatch(API.getFooterPages());
-    }, []);
+    }, [dispatch]);
     console.log(footerPagesData)
   return (
     <div>

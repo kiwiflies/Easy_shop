@@ -6,7 +6,7 @@ import Search from '../../Search/Search';
 
 
 
-function HeaderSec() {
+function HeaderThird({categories}) {
   return (
     <header className={classes.headerthird}>
       <div className="container">
@@ -16,7 +16,7 @@ function HeaderSec() {
                     <Logo small/>
                 </div>
                 <div className={classes.headerthird_menu}>
-                    <MenuLinks header secondary/>
+                    <MenuLinks header secondary categories={categories}/>
                 </div>
                 <div className={classes.headerthird_icons}>
                     <MenuIconsThird />
@@ -26,4 +26,4 @@ function HeaderSec() {
     </header>
   );
 }
-export default HeaderSec
+export default HeaderThird

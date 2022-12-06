@@ -8,7 +8,7 @@ import Subscribe from '../Subscribe/Subscribe';
 import { FacebookIcon, PinterestIcon, InstagramIcon, YoutubeIcon } from '../Icons';
 
 
-function Footer() {
+function Footer({categories}) {
     return (
         <div className={classes.footer_main}>
             <div className='container'>
@@ -25,7 +25,7 @@ function Footer() {
                                     Shop
                                 </div>
                                 <div className={classes.links_column}>
-                                    <MenuLinks/>
+                                    <MenuLinks categories={categories}/>
                                 </div>
                             </div>
                             <div className='flex column'>
@@ -33,19 +33,19 @@ function Footer() {
                                     Corporate
                                 </div>
                                 <div className='flex column'>
-                                    <NavLink href='/career'>
+                                    <NavLink href='career'>
                                         Career
                                     </NavLink>
-                                    <NavLink href='/about'>
+                                    <NavLink href='about'>
                                         About us
                                     </NavLink>
-                                    <NavLink href='/shipping'>
+                                    <NavLink href='shipping'>
                                         Shipping Policy
                                     </NavLink>
-                                    <NavLink href='/return'>
+                                    <NavLink href='return'>
                                         Return Policy
                                     </NavLink>
-                                    <NavLink href='/privacy'>
+                                    <NavLink href='privacy'>
                                         Privacy Policy
                                     </NavLink>
                                 </div>

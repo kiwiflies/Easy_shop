@@ -12,17 +12,17 @@ function SliderSec () {
             <Swiper navigation={true} loop={true} modules={[Navigation]} className='slider_main'>
                 <SwiperSlide>
                     <a href='#' target="_blank">
-                        <img src="/image/sliderpic1.png"/>
+                        <img src="/image/sliderpic1.png" alt="add_slider_pic"/>
                     </a>
                 </SwiperSlide>
                 <SwiperSlide>
                     <a href='#' target="_blank">
-                        <img src="/image/sliderpic1.png"/>
+                        <img src="/image/sliderpic1.png" alt="add_slider_pic"/>
                     </a>
                 </SwiperSlide>
                 <SwiperSlide>
                     <a href='#' target="_blank">
-                        <img src="/image/sliderpic1.png"/>
+                        <img src="/image/sliderpic1.png" alt="add_slider_pic"/>
                     </a>
                 </SwiperSlide>
             </Swiper>

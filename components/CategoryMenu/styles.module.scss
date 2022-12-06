@@ -3,12 +3,12 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    color: #181818E8;
 }
 .category_menu_top {
     display: flex;
     flex-direction: column;
     font-weight: 600;
-    color: #181818E8;
     & a {
         padding-top: 7px;
         padding-bottom: 7px;
@@ -19,8 +19,14 @@
         }
     }
 }
+.menu_categories_headers {
+    font-weight: 600;
+    padding-top: 15px;
+    padding-bottom: 7px;
+}
 .menu_categories {
     list-style-type: none;
+    padding-top: 15px;
     & li {
         padding-bottom: 3px;
         width: fit-content;

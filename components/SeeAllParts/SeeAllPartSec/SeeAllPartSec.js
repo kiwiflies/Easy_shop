@@ -54,8 +54,8 @@ export default function SeeAllPartSec({ href, title, list, productType, Componen
       <div className={classes.slider_part}>
         <Swiper {...settings} ref={swiperRef}>
           {list?.map((item, id) => (
-              <SwiperSlide>
-                <div key={id}>
+              <SwiperSlide key={id}>
+                <div>
                     <Component productType={productType} {...item} />
                 </div>
               </SwiperSlide>))}

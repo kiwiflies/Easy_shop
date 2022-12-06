@@ -8,7 +8,7 @@ import MenuIcons from '../../MenuIcons/MenuIcons';
 import MenuLinks from '../../MenuLinks/MenuLinks';
 
 
-function Header() {
+function HeaderMain({categories}) {
   return (
     <header className={classes.headermain}>
         <div className="container">
@@ -37,7 +37,7 @@ function Header() {
           </div>
           <div className={classes.navbar_part}>
             <div className={classes.links_row}>
-              <MenuLinks secondary/>
+              <MenuLinks categories={categories} secondary/>
             </div>
             <div className={classes.links_icons}>
               <MenuIcons/>
@@ -48,4 +48,4 @@ function Header() {
     </header>
   );
 }
-export default Header
+export default HeaderMain

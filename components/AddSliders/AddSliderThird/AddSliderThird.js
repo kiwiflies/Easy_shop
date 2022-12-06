@@ -23,19 +23,19 @@ function SliderThird () {
         <>
             <Swiper loop={true} className='slider_third' ref={swiperRef}>
                 <SwiperSlide>
-                    <img src="/image/sliderpic3.png"/>
+                    <img src="/image/sliderpic3.png" alt="add_slider_pic"/>
                     <div className={classes.slider_button_part}>
                         <ButtonBlue text="Shop"/>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="/image/sliderpic3.png"/>
+                    <img src="/image/sliderpic3.png" alt="add_slider_pic"/>
                     <div className={classes.slider_button_part}>
                         <ButtonBlue text="Shop"/>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="/image/sliderpic3.png"/>
+                    <img src="/image/sliderpic3.png" alt="add_slider_pic"/>
                     <div className={classes.slider_button_part}>
                         <ButtonBlue text="Shop"/>
                     </div>

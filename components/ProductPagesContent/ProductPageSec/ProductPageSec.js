@@ -224,8 +224,8 @@ function ProductPageSec() {
         </div>
         <div className={classes.productpage_bottom_products}>
           <Swiper {...settings} ref={swiperRef}>
-              {data1?.map((item) => (
-                  <SwiperSlide>
+              {data1?.map((item, index) => (
+                  <SwiperSlide key={index}>
                     <div style={{marginRight: "20px"}}>
                       <ProductCardSec product_name={item.product_name}
                                     productType={item.productType}

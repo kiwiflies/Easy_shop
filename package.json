@@ -22,10 +22,12 @@
     "react-tabs": "^5.1.0",
     "sass": "^1.54.9",
     "swiper": "^8.4.2",
+    "use-router": "^0.4.2",
     "yup": "^0.32.11"
   },
   "devDependencies": {
     "@svgr/webpack": "^6.3.1",
+    "@types/node": "18.11.10",
     "eslint": "8.23.0",
     "eslint-config-next": "12.2.5"
   }

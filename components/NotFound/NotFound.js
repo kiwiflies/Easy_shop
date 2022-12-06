@@ -1,8 +1,8 @@
 import React from 'react';
 import classes from './styles.module.scss';
 import line from '../../public/image/error_line.png';
-import Link from 'next/link';
 import ButtonWhite from '../Buttons/ButtonWhite/ButtonWhite';
+import NavLink from '../NavLink/NavLink';
 
 
 function NotFound() {
@@ -14,11 +14,9 @@ function NotFound() {
             <img src={line.src} alt='not-found-line' className={classes.line}/>
             <div className={classes.back}>
                 <div>Sorry, But we did not find the page you were looking for.</div>
-                <Link href="/">
-                    <a>
+                <NavLink href="">
                         <ButtonWhite className='btn2' text="Back to Home"/>
-                    </a>
-                </Link>
+                </NavLink>
             </div>
         </div>
     );

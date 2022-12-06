@@ -1,37 +1,36 @@
-import CustomLink from "../CustomLink/CustomLink";
 import classes from "./styles.module.scss";
 import { HeartIcon, AccountIcon, ShopbagIcon, SitemapIcon } from "../Icons";
 import NavLink from "../NavLink/NavLink";
+import { storage } from "../../helpers/storage";
+import { useEffect, useState } from "react";
 
 function MenuIcons() {
+  const [state,setState] = useState(null)
+  useEffect(() => {
+    setState(localStorage.getItem("user"))
+  }, [])
   return (
     <div className={classes.menu_icons}>
-      {typeof window !== "undefined" && !localStorage.getItem("user") ? (
-        <NavLink href="/login">
-          <div className="flex column a-center">
-            <div>
-              <AccountIcon />
-            </div>
-          </div>
+      {state ? (
+        <NavLink href="account">
+          <span className={classes.my_acc}>My account</span>
         </NavLink>
-        ) : (
-        <NavLink href="/account">
-          <div className={classes.my_acc}>My account</div>
+      ) : (
+        <NavLink href="login">
+          <span className="flex column a-center">
+              <AccountIcon />
+          </span>
         </NavLink>
       )}
       <a href="#" target="_blank" rel="noreferrer">
-        <div className="flex column a-center">
-          <div>
+        <span className="flex column a-center">
             <HeartIcon />
-          </div>
-        </div>
+        </span>
       </a>
       <a href="#" target="_blank" rel="noreferrer">
-        <div className="flex column a-center">
-          <div>
+        <span className="flex column a-center">
             <ShopbagIcon />
-          </div>
-        </div>
+        </span>
       </a>
     </div>
   );

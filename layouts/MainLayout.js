@@ -1,16 +1,13 @@
 import Head from "next/head";
-import HeaderMain from "../components/Header/HeaderMain/HeaderMain";
-import HeaderSec from "../components/Header/HeaderSec/HeaderSec";
-import HeaderThird from "../components/Header/HeaderThird/HeaderThird";
 import Footer from "../components/Footer/Footer";
-import SwitchComponentsHOC from "../HOC/SwitchComponentsHOC/SwitchComponentsHOC";
 import ZoomModal from "../components/ZoomModal/ZoomModal";
 import { Provider } from "react-redux";
 import store from "../components/redux/store";
 import Breadcrumbs from "../components/Breadcrumbs/Breadcrumbs";
+import Header from "../components/Header";
 
 
-function MainLayout({ children, pagetitle, description, keywords }) {
+function MainLayout({ children, pagetitle, description, keywords, categories }) {
 
   return (
     <>
@@ -22,13 +19,7 @@ function MainLayout({ children, pagetitle, description, keywords }) {
         <meta charSet="utf-8" />
       </Head>
       <Provider store={store}>
-        <SwitchComponentsHOC
-          list={[
-            { HeaderMain: <HeaderMain /> },
-            { HeaderSec: <HeaderSec /> },
-            { HeaderThird: <HeaderThird /> },
-          ]}
-        />
+        <Header categories={categories} />
         <main>
           <ZoomModal />
             <div className="container">
@@ -36,9 +27,10 @@ function MainLayout({ children, pagetitle, description, keywords }) {
            </div>
           <div className={pagetitle === 'Not Found' ? "fullWidth" : "container"}>{children}</div>
         </main>
-        <Footer />
+        <Footer categories={categories} />
       </Provider>
     </>
   );
 }
+
 export default MainLayout;

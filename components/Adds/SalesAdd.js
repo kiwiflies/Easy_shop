@@ -16,14 +16,14 @@ function SalesAdd() {
   return (
    <div className={classes.sales_add_main}>
        <img src={data.img}/>
-            <div className={classes.add_title}>{data.title}</div>
-            <div className={classes.add_buttons}>
-                    {data.category.map((item, index) => (
-                        <div key={index}>
-                            <ButtonWhite text={item}/>
-                        </div>
-                    ))}
-            </div>
+        <div className={classes.add_title}>{data.title}</div>
+        <div className={classes.add_buttons}>
+                {data.category.map((item, index) => (
+                    <div key={index}>
+                        <ButtonWhite text={item}/>
+                    </div>
+                ))}
+        </div>
    </div>
   )
 }

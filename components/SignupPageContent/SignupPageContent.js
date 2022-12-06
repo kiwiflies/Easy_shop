@@ -13,11 +13,12 @@ function SignupPageContent() {
   const dispatch = useDispatch();
   const router = useRouter();
   const {registerData, registerRejected} = useSelector(state => state.login);
+  const [passwordShown, setPasswordShown] = useState(true);
+  const phoneRegExp = /^[^<>]+$/
+
   useEffect (() => {
     registerData && router.push('/login')
-  },[registerData])
-
-  const phoneRegExp = /^[^<>]+$/
+  },[registerData, router]);
 
   const formik = useFormik({
     initialValues: {
@@ -60,12 +61,9 @@ function SignupPageContent() {
     onSubmit: values => dispatch(API.postSignUp(values))
   });
 
-  
-  const [passwordShown, setPasswordShown] = useState(true);
   const togglePassword = () => {
     setPasswordShown(!passwordShown);
   };
-
 
    return (
     <div>

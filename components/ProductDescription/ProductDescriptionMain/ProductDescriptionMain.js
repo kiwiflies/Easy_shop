@@ -121,22 +121,26 @@ function ProductDescriptionMain({data}) {
                         </div>
                     </form>
                     <div className={classes.productpage_description}>
-                        <CustomAccordion header="DESCRIPTION" children={data.description}/>
-                        <CustomAccordion header="SHIPPING & RETURNS" children={data.shipping}/>
+                        <CustomAccordion header="DESCRIPTION">
+                            {data.description}
+                        </CustomAccordion>
+                        <CustomAccordion header="SHIPPING & RETURNS">
+                            {data.shipping}
+                        </CustomAccordion>
                     </div>
                     <div className={classes.productpage_share}>
                         <div>Share</div>
                         <div className='flex'>
-                            <a target='_blank' href="//pinterest.com/pin/create/link/?url={`https://joheny.com${window.location.pathname}`}">
+                            <a target='_blank' rel="noreferrer" href="//pinterest.com/pin/create/link/?url={`https://joheny.com${window.location.pathname}`}">
                                 <PinterestShare/>
                             </a>
-                            <a target='_blank' href="#">
+                            <a target='_blank' rel="noreferrer" href="#">
                                 <FacebookShare/>
                             </a>
-                            <a target='_blank' href="#">
+                            <a target='_blank' rel="noreferrer" href="#">
                                 <TwitterShare/>
                             </a>
-                            <a target='_blank' href="#">
+                            <a target='_blank' rel="noreferrer" href="#">
                                 <InstagramShare/>
                             </a>
                         </div>

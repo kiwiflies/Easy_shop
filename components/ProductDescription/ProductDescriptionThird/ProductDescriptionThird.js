@@ -31,10 +31,9 @@ function ProductDescriptionThird({data}) {
     
 
     useEffect(() => {
-        console.log(data);
         data.reviews.reviewRate && setGrey(Array.from(Array(data.reviews.reviewRate).keys()));
         data.reviews.reviewRate && setWhite(Array.from(Array(5 - data.reviews.reviewRate).keys()));
-    }, [data.rate]);
+    }, [data]);
    return (
     <>
         <div className='flex between'>
@@ -140,16 +139,16 @@ function ProductDescriptionThird({data}) {
                     <a href="#">
                         <ShareIcon/>
                     </a>
-                    <a target='_blank' href="//pinterest.com/pin/create/link/?url={`https://joheny.com${window.location.pathname}`}">
+                    <a target='_blank' rel="noreferrer" href="//pinterest.com/pin/create/link/?url={`https://joheny.com${window.location.pathname}`}">
                         <PinterestShare/>
                     </a>
-                    <a target='_blank' href="#">
+                    <a target='_blank' rel="noreferrer" href="#">
                         <FacebookShare/>
                     </a>
-                    <a target='_blank' href="#">
+                    <a target='_blank' rel="noreferrer" href="#">
                         <TwitterShare/>
                     </a>
-                    <a target='_blank' href="#">
+                    <a target='_blank' rel="noreferrer" href="#">
                         <InstagramShare/>
                     </a>
                 </div>
@@ -161,8 +160,12 @@ function ProductDescriptionThird({data}) {
                     Reviews
                 </div>
                 <div className={classes.productpage_description}>
-                    <CustomAccordion header="DESCRIPTION" children={data.description} className={classes.drop}/>
-                    <CustomAccordion header="SHIPPING INFO" children={data.shipping} className={classes.drop}/>
+                    <CustomAccordion header="DESCRIPTION" className={classes.drop}>
+                        {data.description}
+                    </CustomAccordion>
+                    <CustomAccordion header="SHIPPING INFO" className={classes.drop}>
+                        {data.shipping}
+                    </CustomAccordion>
                 </div>
             </div>
     </>

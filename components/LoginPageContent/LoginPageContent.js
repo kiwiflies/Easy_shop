@@ -12,13 +12,11 @@ import NavLink from '../NavLink/NavLink';
 
  
 function LoginPageContent() {
-
   const dispatch = useDispatch();
   const router = useRouter();
   const {loginData, loginRejected} = useSelector(state => state.login);
   useEffect (() => {
     if (loginData) {
-      console.log(loginData);
       localStorage.setItem('user', loginData.data.token)
       router.push('/')
     }
@@ -82,11 +80,11 @@ function LoginPageContent() {
                 </div>
                 {loginRejected ? <div className={classes.error_message}>Invalid email or password.</div> : null}
                 <ButtonBlack text="Sign In" type="submit"/>
-                <NavLink href="/signup">
-                  <div className={classes.signup}>
-                    <span>Don't have an account? </span>
+                <NavLink href="signup">
+                  <span className={classes.signup}>
+                    <span>Dont have an account? </span>
                     <span>Sign up</span>
-                  </div>
+                  </span>
                 </NavLink>
             </form>
         </div>

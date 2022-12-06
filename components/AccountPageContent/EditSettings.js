@@ -28,7 +28,7 @@ function AccountPageContent({handleSwitch}) {
 
     useEffect(() =>{
     formik.setValues(data)
-        },[data])
+        },[formik, data])
 
     const phoneRegExp = /^[^<>]+$/
 

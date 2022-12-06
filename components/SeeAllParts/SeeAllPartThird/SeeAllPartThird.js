@@ -27,8 +27,8 @@ export default function SeeAllPartThird({ href, title, list, productType, Compon
       <div className={classes.slider_part}>
         <Swiper {...settings} modules={[Pagination]} className='see_all_slider'>
             {list?.map((item) => (
-                <SwiperSlide>
-                <div key={item.id}>
+                <SwiperSlide key={item.id}>
+                <div>
                     <Component productType={productType} {...item} />
                 </div>
                 </SwiperSlide>))}

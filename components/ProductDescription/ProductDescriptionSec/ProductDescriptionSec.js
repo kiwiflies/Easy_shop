@@ -80,16 +80,16 @@ function ProductDescriptionSec({data}) {
                     <a href="#">
                         <ShareIcon/>
                     </a>
-                    <a target='_blank' href="//pinterest.com/pin/create/link/?url={`https://joheny.com${window.location.pathname}`}">
+                    <a target='_blank' rel="noreferrer" href="//pinterest.com/pin/create/link/?url={`https://joheny.com${window.location.pathname}`}">
                         <PinterestShare/>
                     </a>
-                    <a target='_blank' href="#">
+                    <a target='_blank' rel="noreferrer" href="#">
                         <FacebookShare/>
                     </a>
-                    <a target='_blank' href="#">
+                    <a target='_blank' rel="noreferrer" href="#">
                         <TwitterShare/>
                     </a>
-                    <a target='_blank' href="#">
+                    <a target='_blank' rel="noreferrer" href="#">
                         <InstagramShare/>
                     </a>
                 </div>

@@ -12,7 +12,7 @@ function SliderSec () {
             <Swiper loop={true} pagination={{clickable: true,}} modules={[Pagination]} className='slider_sec'>
                 <SwiperSlide>
                     <a href='#' target="_blank">
-                        <img src="/image/sliderpic2.png"/>
+                        <img src="/image/sliderpic2.png" alt="add_slider_pic"/>
                         <div className={classes.slider_button_part}>
                             <ButtonWhite text="Shop now"/>
                         </div>
@@ -20,7 +20,7 @@ function SliderSec () {
                 </SwiperSlide>
                 <SwiperSlide>
                     <a href='#' target="_blank">
-                        <img src="/image/sliderpic2.png"/>
+                        <img src="/image/sliderpic2.png" alt="add_slider_pic"/>
                         <div className={classes.slider_button_part}>
                             <ButtonWhite text="Shop now"/>
                         </div>
@@ -28,7 +28,7 @@ function SliderSec () {
                 </SwiperSlide>
                 <SwiperSlide>
                     <a href='#' target="_blank">
-                        <img src="/image/sliderpic2.png"/>
+                        <img src="/image/sliderpic2.png" alt="add_slider_pic"/>
                         <div className={classes.slider_button_part}>
                             <ButtonWhite text="Shop now"/>
                         </div>

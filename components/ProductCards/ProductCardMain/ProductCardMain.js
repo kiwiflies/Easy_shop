@@ -16,6 +16,7 @@ function ProductMain({
   rate,
   item_img,
   viewed_product,
+  product_id = 3
 }) {
     const sale = productType === "sale";
     const new_product = productType === "new_product";
@@ -37,7 +38,7 @@ function ProductMain({
         <img src={item_img}/>
       </div>
       <div className={classes.product_name}>
-      <Link href="/product">
+      <Link href={`/products/${product_id}`}>
           {product_name}
         </Link>
       </div>
