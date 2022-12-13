@@ -6,9 +6,13 @@ import NavLink from '../NavLink/NavLink';
 import CustomLink from '../CustomLink/CustomLink';
 import Subscribe from '../Subscribe/Subscribe';
 import { FacebookIcon, PinterestIcon, InstagramIcon, YoutubeIcon } from '../Icons';
+import { useTranslation } from "react-i18next";
 
 
 function Footer({categories}) {
+
+  const {t} = useTranslation();
+
     return (
         <div className={classes.footer_main}>
             <div className='container'>
@@ -22,7 +26,7 @@ function Footer({categories}) {
                         <div className={classes.footer_left}>
                             <div className='flex column'>
                                 <div className={classes.footer_headers}>
-                                    Shop
+                                    {t("shop")}
                                 </div>
                                 <div className={classes.links_column}>
                                     <MenuLinks categories={categories}/>
@@ -30,29 +34,29 @@ function Footer({categories}) {
                             </div>
                             <div className='flex column'>
                                 <div className={classes.footer_headers}>
-                                    Corporate
+                                    {t("corporate")}
                                 </div>
                                 <div className='flex column'>
                                     <NavLink href='career'>
-                                        Career
+                                        {t("career")}
                                     </NavLink>
                                     <NavLink href='about'>
-                                        About us
+                                        {t("about_us")}
                                     </NavLink>
                                     <NavLink href='shipping'>
-                                        Shipping Policy
+                                        {t("shipping_policy")}
                                     </NavLink>
                                     <NavLink href='return'>
-                                        Return Policy
+                                        {t("return_policy")}
                                     </NavLink>
                                     <NavLink href='privacy'>
-                                        Privacy Policy
+                                        {t("privacy_policy_short")}
                                     </NavLink>
                                 </div>
                             </div>
                             <div className='flex column'>
                                 <div className={classes.footer_headers}>
-                                    Find us on
+                                    {t("find_us")}
                                 </div>
                                 <div className='flex column'>
                                     <CustomLink href="#" 

@@ -5,6 +5,8 @@ import { API } from "../redux/product/API";
 import HeaderMain from "./HeaderMain/HeaderMain";
 import HeaderSec from "./HeaderSec/HeaderSec";
 import HeaderThird from "./HeaderThird/HeaderThird";
+import HeaderMobile from "./HeaderMobile/HeaderMobile";
+import { useWindowSize } from "../../helpers/useWindowSize";
 
 const Header = ({categories}) => {
     const dispatch = useDispatch();
@@ -15,14 +17,20 @@ const Header = ({categories}) => {
       dispatch(API.getProductCategory());
     }, [dispatch]);
 
+    const [width] = useWindowSize();
+
     return (
+      <>
+        {width >= 767 ? (
         <SwitchComponentsHOC
           list={[
             { HeaderMain: <HeaderMain categories={menuList} /> },
             { HeaderSec: <HeaderSec categories={menuList} /> },
             { HeaderThird: <HeaderThird categories={menuList} /> },
           ]}
-        />
+        />) : (
+        <HeaderMobile categories={menuList}/>)}
+      </>
     )
 }
 

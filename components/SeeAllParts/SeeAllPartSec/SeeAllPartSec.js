@@ -6,6 +6,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { ProductPrev, ProductNext } from "../../Icons";
+import { useTranslation } from "react-i18next";
+
 
 
 const settings = {
@@ -27,6 +29,8 @@ export default function SeeAllPartSec({ href, title, list, productType, Componen
     if (!swiperRef.current) return;
     swiperRef.current.swiper.slideNext();
     }, []);
+  const {t} = useTranslation();
+
 
   return (
     <div className={classes.see_all_part}>
@@ -37,7 +41,7 @@ export default function SeeAllPartSec({ href, title, list, productType, Componen
         <div className="flex justify-end">
             <div>
                 <NavLink href={href} className={classes.view_all}>
-                    View all products
+                {t("view_all_prod")}
                 </NavLink>
             </div>
             <div>

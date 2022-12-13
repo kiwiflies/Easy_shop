@@ -11,9 +11,14 @@ a {
 body {
   font-family: var(--primary-font);
   font-size: 14px;
+  overflow-x: hidden;
 }
 main {
   min-height: 100vh;
+  overflow-x: hidden;
+  @media (max-width: 767px) {
+    margin-top: 50px;
+}
 }
 .img-cover {
   height: 100%;
@@ -275,19 +280,6 @@ main {
     width: 100%;
     object-fit: cover;
   }
-  // & .swiper-vertical {
-  //   touch-action: pan-x!important;
-  // }
-  // & .swiper-button-prev {
-  //   position: absolute;
-  //   top:0;
-  //   z-index: 2000;
-  // }
-  // & .swiper-button-next {
-  //   position: absolute;
-  //   bottom: 0;
-  //   z-index: 2000;
-  // }
 }
 .ql-toolbar.ql-snow {
   border-top-left-radius: 6px;
@@ -332,8 +324,9 @@ main {
   }
 }
 
-
 /* END OF PRODUCT SEC TABS */
+
+
 
 /* ACCOUNT SETTINGS */
 

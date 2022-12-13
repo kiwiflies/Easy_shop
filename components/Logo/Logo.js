@@ -1,9 +1,12 @@
-import classes from './styles.module.scss'
-import Image from 'next/image'
-import NavLink from '../NavLink/NavLink'
-
+import classes from './styles.module.scss';
+import Image from 'next/image';
+import NavLink from '../NavLink/NavLink';
+import { useWindowSize } from "../../helpers/useWindowSize";
 
 function Logo(props) {
+
+    const [width, height] = useWindowSize();
+
     return (
         <>
             {props.black &&<> 

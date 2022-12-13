@@ -6,10 +6,15 @@ const footerSlice = createSlice({
   name: "footerPages",
   initialState: {
     footerPagesData: [],
+    footerPagesRejected: false
   },
   extraReducers: (builder) => {
-    builder.addCase(API.getFooterPages.fulfilled, (state, action) => {
+    builder
+    .addCase(API.getFooterPages.fulfilled, (state, action) => {
       state.footerPagesData = action.payload.data;
+    })
+    .addCase(API.getFooterPages.rejected, (state) => {
+      state.footerPagesRejected = true;
     });
   },
 });

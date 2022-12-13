@@ -9,7 +9,6 @@ import getCategories from '../api/getCategories';
 
 function Product({categories}) {
   const {query} = useRouter();
-  console.log(query);
 
    return (
     <MainLayout pagetitle='Product' categories={categories}>
@@ -24,10 +23,10 @@ function Product({categories}) {
    )
  }
 
- export async function getServerSideProps() {
-   const categories = await getCategories();
+//  export async function getServerSideProps() {
+//    const categories = await getCategories();
  
-   return { props: { categories } };
- }
+//    return { props: { categories } };
+//  }
 
  export default Product

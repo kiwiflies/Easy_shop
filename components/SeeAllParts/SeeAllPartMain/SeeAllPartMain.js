@@ -1,8 +1,13 @@
 import React from "react";
 import NavLink from "../../NavLink/NavLink";
 import classes from './styles.module.scss';
+import { useTranslation } from "react-i18next";
+
 
 export default function SeeAllPartMain({ href, title, list, productType, Component }) {
+
+  const {t} = useTranslation();
+
   return (
     <div className={classes.see_all_part}>
       <div className={classes.see_all_top}>
@@ -10,7 +15,7 @@ export default function SeeAllPartMain({ href, title, list, productType, Compone
           {title}
         </div>
         <NavLink href={href} className={classes.see_all}>
-            See all
+            {t("see_all")}
         </NavLink>
       </div>
       <div className="row">

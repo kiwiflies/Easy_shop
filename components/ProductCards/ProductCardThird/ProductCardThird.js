@@ -2,6 +2,8 @@ import classes from "./styles.module.scss";
 import ButtonWhite from "../../Buttons/ButtonWhite/ButtonWhite";
 import ButtonLike from "../../Buttons/ButtonLike/ButtonLike";
 import Link from 'next/link';
+import { useTranslation } from "react-i18next";
+
 
 
 function ProductThird({
@@ -16,6 +18,7 @@ function ProductThird({
 }) {
   const sale = productType === "sale";
   const new_product = productType === "new_product";
+  const {t} = useTranslation();
 
   return (
     <div className={classes.product_card}>
@@ -55,19 +58,19 @@ function ProductThird({
         </div>
       </div>
       <div className={classes.product_card_bottom}>
-        <ButtonWhite text="Add to cart" />
+        <ButtonWhite text={t("add_card")} />
       </div>
       <div className={classes.sale_new}>
         {new_product && (
           <div className={classes.product_new}>
             <div />
-            <span>New</span>
+            <span>{t("new_card_short")}</span>
           </div>
         )}
         {sale && (
           <div className={classes.product_sale}>
             <div />
-            <span>Sale</span>
+            <span>{t("sale_card")}</span>
             <span>{sale_number}</span>
           </div>
         )}

@@ -5,6 +5,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper";
+import { useTranslation } from "react-i18next";
+
 
 const settings = {
     pagination: {clickable: true},
@@ -14,6 +16,9 @@ const settings = {
   }
 
 export default function SeeAllPartThird({ href, title, list, productType, Component }) {
+
+  const {t} = useTranslation();
+
   return (
     <div className={classes.see_all_part}>
       <div className={classes.see_all_top}>
@@ -21,7 +26,7 @@ export default function SeeAllPartThird({ href, title, list, productType, Compon
           {title}
         </div>
         <NavLink href={href} className={classes.view_all}>
-            View all
+        {t("view_all")}
         </NavLink>
       </div>
       <div className={classes.slider_part}>

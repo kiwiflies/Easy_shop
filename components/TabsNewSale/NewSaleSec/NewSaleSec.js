@@ -8,6 +8,8 @@ import { useCallback, useRef } from "react";
 import { NextSmall, PrevSmall } from "../../Icons";
 import ProductCardSec from '../../ProductCards/ProductCardSec/ProductCardSec';
 import ButtonWhite from '../../Buttons/ButtonWhite/ButtonWhite';
+import { useTranslation } from "react-i18next";
+
 
 const data = [{
   product_name: "CRelaxed Fit Patterned cotton T-shirt",
@@ -102,18 +104,20 @@ function NewSaleSec() {
   swiperRef.current.swiper.slideNext();
   }, []);
   
+  const {t} = useTranslation();
+
   return (
     <div className='tabs_part_sec'>
       <Tabs>
         <TabList>
           <Tab>
               <div className={classes.new_tab}>
-                New arrivals
+              {t("new_arrivals")}
               </div>
           </Tab>
           <Tab>
               <div className={classes.sale_tab}>
-                Sale
+              {t("sale")}
               </div>
           </Tab>
         </TabList>
@@ -139,7 +143,7 @@ function NewSaleSec() {
             </button>
           </div>
           <div className={classes.shop_now_button}>
-            <ButtonWhite text="Shop now"/>
+            <ButtonWhite text={t("shop_now")}/>
           </div>
         </TabPanel>
         <TabPanel>
@@ -165,7 +169,7 @@ function NewSaleSec() {
             </button>
           </div>
           <div className={classes.shop_now_button}>
-            <ButtonWhite text="Shop now"/>
+            <ButtonWhite text={t("shop_now")}/>
           </div>
         </TabPanel>
       </Tabs>

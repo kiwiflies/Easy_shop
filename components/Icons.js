@@ -57,8 +57,12 @@ import FaqIcon from '../public/icons/faq_icon.svg';
 import LogoutIcon from '../public/icons/logout_icon.svg';
 import AccArrow from '../public/icons/acc_arrow.svg';
 import PencilIcon from '../public/icons/pencil.svg';
-
-
+import GoBackIcon from '../public/icons/go_back.svg';
+import Joheny from '../public/icons/Joheny.svg';
+import ArmFlag from '../public/icons/arm.svg';
+import RusFlag from '../public/icons/ru.svg';
+import UkFlag from '../public/icons/uk.svg';
+import AttachIcon from '../public/icons/attach_icon.svg';
 
 
 export {
@@ -120,5 +124,11 @@ export {
     FaqIcon,
     LogoutIcon,
     AccArrow,
-    PencilIcon
+    PencilIcon,
+    GoBackIcon,
+    Joheny,
+    ArmFlag,
+    RusFlag,
+    UkFlag,
+    AttachIcon
 }

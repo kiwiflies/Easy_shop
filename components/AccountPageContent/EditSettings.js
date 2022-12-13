@@ -6,6 +6,7 @@ import ButtonBlack from '../Buttons/ButtonBlack/ButtonBlack';
 import ButtonWhite from '../Buttons/ButtonWhite/ButtonWhite';
 import { useDispatch, useSelector } from 'react-redux';
 import { API } from '../redux/LogIn/API';
+import { useRouter } from 'next/router';
 
 const data = {
     email: "blabla@mail.ru",
@@ -17,8 +18,8 @@ const data = {
     city_code: "Yerevan"
 }
 
-function AccountPageContent({handleSwitch}) { 
-    
+function EditSettings({handleSwitch}) { 
+    const router = useRouter();
     const dispatch = useDispatch();
 
     const {registerData, registerRejected} = useSelector(state => state.login);
@@ -28,7 +29,7 @@ function AccountPageContent({handleSwitch}) {
 
     useEffect(() =>{
     formik.setValues(data)
-        },[formik, data])
+        },[data])
 
     const phoneRegExp = /^[^<>]+$/
 
@@ -191,4 +192,4 @@ function AccountPageContent({handleSwitch}) {
             </form>
     )
 }
-export default AccountPageContent 
+export default EditSettings 

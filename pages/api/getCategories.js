@@ -1,8 +1,8 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+
+import axiosSet from "../../helpers/axiosSet";
 
 export default async function getCategories() {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}api/product/category/list`);
-  const data = await response.json();
-
-  return data.data || []
+  const data = await axiosSet.get(`api/product/category/list`);
+  
+  return data.data.data || []
 }

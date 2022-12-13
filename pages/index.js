@@ -14,6 +14,8 @@ import NewSaleMain from "../components/TabsNewSale/NewSaleMain/NewSaleMain";
 import NewSaleSec from "../components/TabsNewSale/NewSaleSec/NewSaleSec";
 import NewSaleThird from "../components/TabsNewSale/NewSaleThird/NewSaleThird";
 import getCategories from "./api/getCategories";
+import { useTranslation } from "react-i18next";
+
 
 const data = [
   {
@@ -116,6 +118,8 @@ const data2 = [
 
 function Home({ categories }) {
 
+  const {t} = useTranslation();
+
   return (
     <MainLayout pagetitle="Home" categories={categories}>
       <SwitchComponentsHOC
@@ -137,7 +141,7 @@ function Home({ categories }) {
           {
             ProductCardMain: (
               <SeeAllPartMain
-                title="Woman"
+                title={t("women")}
                 href=""
                 list={data}
                 Component={ProductCardMain}
@@ -147,7 +151,7 @@ function Home({ categories }) {
           {
             ProductCardSec: (
               <SeeAllPartSec
-                title="Woman"
+                title={t("women")}
                 href=""
                 list={data1}
                 Component={ProductCardSec}
@@ -157,7 +161,7 @@ function Home({ categories }) {
           {
             ProductCardThird: (
               <SeeAllPartThird
-                title="Woman"
+                title={t("women")}
                 href=""
                 list={data2}
                 Component={ProductCardThird}
@@ -172,7 +176,7 @@ function Home({ categories }) {
           {
             ProductCardMain: (
               <SeeAllPartMain
-                title="Men"
+                title={t("men")}
                 href=""
                 list={data}
                 Component={ProductCardMain}
@@ -182,7 +186,7 @@ function Home({ categories }) {
           {
             ProductCardSec: (
               <SeeAllPartSec
-                title="Men"
+                title={t("men")}
                 href=""
                 list={data1}
                 Component={ProductCardSec}
@@ -192,7 +196,7 @@ function Home({ categories }) {
           {
             ProductCardThird: (
               <SeeAllPartThird
-                title="Men"
+                title={t("men")}
                 href=""
                 list={data2}
                 Component={ProductCardThird}
@@ -206,7 +210,7 @@ function Home({ categories }) {
           {
             ProductCardMain: (
               <SeeAllPartMain
-                title="Kids"
+                title={t("kids")}
                 href=""
                 list={data}
                 Component={ProductCardMain}
@@ -216,7 +220,7 @@ function Home({ categories }) {
           {
             ProductCardSec: (
               <SeeAllPartSec
-                title="Kids"
+                title={t("kids")}
                 href=""
                 list={data1}
                 Component={ProductCardSec}
@@ -226,7 +230,7 @@ function Home({ categories }) {
           {
             ProductCardThird: (
               <SeeAllPartThird
-                title="Kids"
+                title={t("kids")}
                 href=""
                 list={data2}
                 Component={ProductCardThird}
@@ -239,10 +243,10 @@ function Home({ categories }) {
   );
 }
 
-export async function getServerSideProps() {
-  const categories = await getCategories();
+// export async function getServerSideProps() {
+//   const categories = await getCategories();
 
-  return { props: { categories } };
-}
+//   return { props: { categories } };
+// }
 
 export default Home;

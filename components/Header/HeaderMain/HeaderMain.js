@@ -6,9 +6,14 @@ import CustomLink from '../../CustomLink/CustomLink';
 import { MapPinIcon, PhoneIcon } from '../../Icons';
 import MenuIcons from '../../MenuIcons/MenuIcons';
 import MenuLinks from '../../MenuLinks/MenuLinks';
+import { useTranslation } from "react-i18next";
+
 
 
 function HeaderMain({categories}) {
+
+  const {t} = useTranslation();
+
   return (
     <header className={classes.headermain}>
         <div className="container">
@@ -21,7 +26,7 @@ function HeaderMain({categories}) {
             <div className={classes.top_links}>
               <CustomLink  href="https://goo.gl/maps/Lc5nvaphFMEYsuFXA" 
                             icon={<MapPinIcon/>} 
-                            text="Parpetsy str, 5"/>
+                            text={t("address")}/>
             </div>
           </div>
           <div className='flex between'>
@@ -43,7 +48,6 @@ function HeaderMain({categories}) {
               <MenuIcons/>
             </div>
           </div>
-          {/* <NavBar header/> */}
         </div>
     </header>
   );

@@ -5,6 +5,8 @@ import { SmallGreyStar, SmallGreyStarStroke } from '../../Icons';
 import { useState, useEffect } from "react";
 import Link from 'next/link';
 import Rating from "../../Rating/Rating";
+import { useTranslation } from "react-i18next";
+
 
 
 function ProductMain({
@@ -20,13 +22,15 @@ function ProductMain({
 }) {
     const sale = productType === "sale";
     const new_product = productType === "new_product";
+
+    const {t} = useTranslation();
     
   return (
     <div className={classes.product_card}>
-      {new_product && <div className={classes.product_new}>New</div>}
+      {new_product && <div className={classes.product_new}>{t("new_card")}</div>}
       {sale && (
         <div className={classes.product_sale}>
-          <span>Sale</span>
+          <span>{t("sale_card")}</span>
           <span>|</span>
           <span>{sale_number}</span>
         </div>
@@ -55,7 +59,7 @@ function ProductMain({
       </div>
       <div className={classes.product_bottom} 
       style={{marginTop: viewed_product && new_product ? "38px" : viewed_product && !sale && !new_product? "38px" : null}}>
-        <ButtonWhite text="ADD TO CART" />
+        <ButtonWhite text={t("add_card")} />
         <ButtonLike />
       </div>
     </div>

@@ -87,7 +87,7 @@ const data = {
 
 
 function CategoryPageContent() {
-  const { title } = useSelector((state) => state.product);
+  const { title1, title2 } = useSelector((state) => state.product);
 
   return (
     <div className='flex'>
@@ -95,11 +95,11 @@ function CategoryPageContent() {
             <CategoryMenu/>
         </div>
         <div className={classes.category_page_right}>
-            <Title text={title}/>
+            <Title text={title1}/>
             <div className={classes.category_page_add}>
                 <SalesAdd/>
             </div>
-            <Title text={title}/>
+            <Title text={title2}/>
             <div className={classes.category_description}>
                 {data.category_description}
             </div>

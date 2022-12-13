@@ -8,6 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import ProductCardMain from '../../ProductCards/ProductCardMain/ProductCardMain';
 import { PrevArrow, NextArrow } from "../../Icons";
+import { useTranslation } from "react-i18next";
 
 
 const data = {
@@ -142,6 +143,8 @@ function ProductPageMain() {
   if (!swiperRef.current) return;
   swiperRef.current.swiper.slideNext();
   }, []);
+
+  const {t} = useTranslation();
 
   return (
     <div className={classes.productpage_part}>

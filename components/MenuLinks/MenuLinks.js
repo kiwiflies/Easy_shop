@@ -3,24 +3,30 @@ import PropTypes from "prop-types";
 import NavLink from "../NavLink/NavLink";
 import classes from "./styles.module.scss";
 import { useDispatch, useSelector } from "react-redux";
-import { changeTitle } from "../redux/product/slice";
+import { changeTitle1, changeTitle2 } from "../redux/product/slice";
+import { useTranslation } from "react-i18next";
+
+
 
 function MenuLinks({ categories, secondary }) {
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
   const { productCategoryData } = useSelector((state) => state.product);
-  const menuList = categories || productCategoryData;
-
+  // const menuList = categories || productCategoryData;
+  const menuList = productCategoryData;
+  
   const mouseHover = (bool, e) => {
     e.stopPropagation();
     setOpen(bool);
   };
+  const dispatchTitle1 = (item) => dispatch(changeTitle1(item));
+  const dispatchTitle2 = (item) => dispatch(changeTitle2(item));
 
-  const dispatchTitle = (item) => dispatch(changeTitle(item));
+  const {t} = useTranslation();
 
   return (
     <React.Fragment>
-    <div className={classes.menu_drop}>
+     <div className={classes.menu_drop}>
       <div className={classes.menulinks}>
         {menuList?.map(
           (item, index) =>
@@ -33,10 +39,10 @@ function MenuLinks({ categories, secondary }) {
                 onMouseLeave={(e) => mouseHover(null, e)}
                 onClick={() => {
                   setOpen(false);
-                  dispatchTitle(item.translation.title);
+                  dispatchTitle1(item.translation?.title);
                 }}
               >
-                {item.translation.title}
+                {item.translation?.title}
               </NavLink>
             )
         )}
@@ -45,16 +51,16 @@ function MenuLinks({ categories, secondary }) {
             <NavLink
               href="products"
               className={classes.navlink_sale}
-              onClick={() => dispatchTitle("Sale")}
+              onClick={() => dispatchTitle1("Sale")}
             >
-              Sale
+              {t("sale")}
             </NavLink>
             <NavLink
               href="products"
               className={classes.navlink}
-              onClick={() => dispatchTitle("New arrivals")}
+              onClick={() => dispatchTitle1("New arrivals")}
             >
-              New arrivals
+              {t("new_arrivals")}
             </NavLink>
           </>
         )}
@@ -67,12 +73,12 @@ function MenuLinks({ categories, secondary }) {
       >
         <div className={classes.menu_div_inner}>
           <div className={classes.menu_div_categories}>
-            <div onClick={() => dispatchTitle("New arrivals")}>
-              New arrivals
+            <div onClick={() => dispatchTitle2("New arrivals")}>
+            {t("new_arrivals")}
             </div>
-            <div onClick={() => dispatchTitle("Bestsellers")}>Bestsellers</div>
-            <div onClick={() => dispatchTitle("Sales")}>Sales</div>
-            <div onClick={() => dispatchTitle("Giftcards")}>Giftcards</div>
+            <div onClick={() => dispatchTitle2("Bestsellers")}>{t("best_sell")}</div>
+            <div onClick={() => dispatchTitle2("Sales")}>{t("sale")}</div>
+            <div onClick={() => dispatchTitle2("Giftcards")}>{t("gift_cards")}</div>
           </div>
           <div className="flex column">
             <ul className={classes.menu_categories}>
@@ -81,9 +87,9 @@ function MenuLinks({ categories, secondary }) {
                   return (
                     <li
                       key={index}
-                      onClick={() => dispatchTitle(item.translation.title)}
+                      onClick={() => dispatchTitle2(item.translation?.title)}
                     >
-                      {item.translation.title}
+                      {item.translation?.title}
                     </li>
                   );
                 }
@@ -97,9 +103,9 @@ function MenuLinks({ categories, secondary }) {
                   return (
                     <li
                       key={index}
-                      onClick={() => dispatchTitle(item.translation.title)}
+                      onClick={() => dispatchTitle2(item.translation?.title)}
                     >
-                      {item.translation.title}
+                      {item.translation?.title}
                     </li>
                   );
                 }

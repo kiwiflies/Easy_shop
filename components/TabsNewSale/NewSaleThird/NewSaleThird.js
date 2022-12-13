@@ -7,6 +7,8 @@ import "swiper/css/navigation";
 import { useCallback, useRef } from "react";
 import { PrevCircle, NextCircle } from "../../Icons";
 import ProductCardThird from '../../ProductCards/ProductCardThird/ProductCardThird';
+import { useTranslation } from "react-i18next";
+
 
 const data = [{
   product_name: "CRelaxed Fit Patterned cotton T-shirt",
@@ -107,6 +109,9 @@ function NewSaleThird() {
   if (!swiperRef.current) return;
   swiperRef.current.swiper.slideNext();
   }, []);
+
+  const {t} = useTranslation();
+
   
   return (
     <div className='tabs_part_third'>
@@ -114,12 +119,12 @@ function NewSaleThird() {
         <TabList>
           <Tab>
               <div className={classes.new_tab}>
-                New arrivals
+                {t("new_arrivals")}
               </div>
           </Tab>
           <Tab>
               <div className={classes.search_tab}>
-                Sale
+              {t("sale")}
               </div>
           </Tab>
         </TabList>
@@ -146,7 +151,7 @@ function NewSaleThird() {
             </button>
           </div>
           <div className={classes.view_all_link}>
-            <a href='#'>View all</a>
+            <a href='#'>{t("view_all")}</a>
           </div>
         </TabPanel>
         <TabPanel>
@@ -173,7 +178,7 @@ function NewSaleThird() {
             </button>
           </div>
           <div className={classes.view_all_link}>
-            <a href='#'>View all</a>
+            <a href='#'>{t("view_all")}</a>
           </div>
         </TabPanel>
       </Tabs>

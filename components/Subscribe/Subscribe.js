@@ -1,46 +1,46 @@
 import classes from './styles.module.scss';
 import ButtonBlack from '../Buttons/ButtonBlack/ButtonBlack';
+import { useTranslation } from "react-i18next";
 
 
 function Subscribe ({white, black}) {
+
+  const {t} = useTranslation();
+
     return (
         <div>
             {black && <div className={classes.subscribe_part}>
                 <div className={classes.subscribe_header}>
-                    Subscribe for our Updates
+                    {t("subscribe_text_sec")}
                 </div>
                 <div className={classes.subscribe_privacy}>
-                    <span>By entering your email address below, you can consent to receiving our 
-                        newsletter with access to our latest collections.
-                    </span>
+                    <span>{t("subscribe_policy")}</span>
                     <span>
-                        <a href='#'>Privacy Policy</a>
+                        <a href='#'>{t("privacy_policy")}</a>
                     </span>
                 </div>
                 <div className={classes.subscribe_form_part}>
                     <form>
-                        <input type="email" placeholder='Write your email addres' />
-                        <ButtonBlack text="Subscribe"/>    
+                        <input type="email" placeholder={t("write_email")} />
+                        <ButtonBlack text={t("subscribe")}/>    
                     </form>
                 </div>
             </div>}
             {white && <div className={classes.subscribe_part_white}>
                 <div className={classes.subscribe_header_sec}>
-                    Subscribe for our Updates
+                    {t("subscribe_text_sec")}
                 </div>
                 <div className={classes.subscribe_right}>
                     <div className={classes.subscribe_form_part_sec}>
                         <form>
-                            <input type="email" placeholder='Write your email addres' />
-                            <ButtonBlack text="Subscribe"/>    
+                            <input type="email" placeholder={t("write_email")} />
+                            <ButtonBlack text={t("subscribe")}/>    
                         </form>
                     </div>
                     <div className={classes.subscribe_privacy_sec}>
-                        <div>By entering your email address below, you can consent to receiving our 
-                            newsletter with access to our latest collections.
-                        </div>
+                        <div>{t("subscribe_text")}</div>
                         <div>
-                            <a>Privacy Policy</a>
+                            <a>{t("privacy_policy")}</a>
                         </div>
                     </div>
                 </div>

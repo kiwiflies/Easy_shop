@@ -8,4 +8,7 @@ export const API = Object.freeze({
   postLogIn: createAsyncThunk("post/logIn", async (data) => {
     return await axiosSet.post("user_api/login", data);
   }),
+  updateUser: createAsyncThunk("post/signUp", async (data) => {
+    return await axiosSet.post("user_api/register", data);
+  }),
 });

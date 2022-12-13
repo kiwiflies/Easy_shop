@@ -11,6 +11,6 @@ export default axios.create({
     Accept: "application/json",
     "Content-Type": "application/json",
     ...token,
-    'X-locale': 'en',
+    'X-locale': typeof window !== 'undefined' && localStorage.getItem('userLanguage'),
   },
 });
